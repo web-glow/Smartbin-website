@@ -1,0 +1,794 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+ 
+}
+
+body {
+    background: white;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-family:  Asap, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+/* Page Header */
+
+.page-header {
+    padding:0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 300px;
+    text-align: center;
+    background-color: rgb(249, 75, 75); 
+}
+
+/* Main Menu (navigation system)*/
+#main-menu {
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    background-color: none;
+
+}
+
+#main-menu ul {
+    background-color: #888;
+    display: flex;
+    justify-content: center;
+}
+
+#main-menu li{
+    list-style: none;
+    background-color: #888;
+}
+
+#main-menu a {
+    display: block;
+    color: white;
+    padding: 0.75em 5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#main-menu a:hover {
+    background: #fffed5;
+    color: black;
+}
+
+#main-menu li.current-page {
+    background: black;
+    color: white;
+    text-shadow: none;
+}
+
+/* back to the top button*/
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-size: 1em;
+    border: 1px solid rgb(249, 75, 75);
+    cursor: pointer;
+    background-color: rgb(249, 75, 75);
+    color: white;
+    padding: 15px;
+    border-radius: 15%;
+    transition: all 0.4s ease
+}
+
+#topButton:hover {
+    background-color: rgb(34, 34, 34);
+    border: 1px solid hsl(0, 0%, 84%);
+    transition: all 0.4s ease
+}
+
+/*about website section*/
+.sect {
+    margin: 0em 7em;
+    overflow: hidden;
+}
+
+#concept > h3,
+#product > h3,
+#construction > h3,
+#design > h3,
+#outcomes > h3 {
+    font-size: 4em;
+    line-height: 1em;
+    font-weight: 200;
+    width: 100%;
+    padding:0.8em 1em;
+    margin-top:1em;
+    margin-left:1em;
+    color: rgb(249, 75, 75);
+}
+
+#concept > p,
+#product > p,
+#construction > p,
+#design > p,
+#outcomes > p {
+    padding:0.8em 4em;
+    margin:0.8em 2em 2em 2em;
+    
+    border-radius: 15px;
+    font-size: 1.3em;
+}
+
+
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-style: inset;
+    border-width: 1px;
+}
+
+/*information about instruments section*/
+#instruments {
+    padding: 0em 3.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#instruments article {
+    width:30%;
+    min-width:200px;
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 2em;
+}
+
+#instruments article p {
+    text-align: justify;
+    padding-top: 1.3em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;   
+    font-size: 1.2em;
+    max-height: fit-content;
+}
+
+#instruments article img {
+    width:40%;
+    min-width:40%;
+    border-radius: 100%;
+    transition: all 0.7s ease
+}
+
+#instruments article img:hover {
+    width:45%;
+    border-radius: 100%;
+    transition: all 0.7s ease;
+}
+
+/*expands more information when clicking on the image or the text*/
+body.js #instruments article .expand-button {
+    display: block;
+    padding-top: 1.4em;
+    font-size: 2em;
+}
+
+body.js #instruments article .expand-button a {
+    color:black;
+	text-decoration: none;
+}
+
+body.js #instruments article .info {
+	height: 0;
+	overflow: hidden;
+	transition: all 1s ease;
+}
+
+body.js #instruments article.expanded .info {
+    padding-top: 1.3em;
+    font-size: 1.2em;
+    height: 100%;
+    text-align: justify;
+}
+
+/* Lessons options*/
+#lesson-options {
+    position: relative;
+}
+
+#lesson-options ul {
+    display: flex;
+    justify-content: center;
+}
+
+#lesson-options li{
+    list-style: none;
+    border: 2px solid #d6d6d6;
+    border-radius: 15px;
+}
+
+#lesson-options a {
+    font-size: 2em;
+    color: black;
+    display:block;
+    padding: 6em;
+    text-decoration: none;
+}
+
+#lesson-options a:hover {
+    background: grey;
+    border-radius: 15px;
+    transition: all 0.7s ease;
+}
+
+/*image of child which shows up when cursor is hovered on the basic button*/
+#lesson-options img#child-image {
+    height:200px;
+    max-height: 30%;
+    width:auto;
+    position: fixed;
+    left:30px;
+    bottom:-200px;
+}
+
+/*image of the pied piper which shows up when cursor is hovered on the advance button*/
+#lesson-options img#piper-image {
+    height:300px;
+    width:auto;
+    position: fixed;
+    right:50px;
+    bottom:-300px;
+}
+
+/*basic & advance music theory*/
+#content {
+    margin: 0em 7em;
+    overflow: hidden;
+}
+
+#content h2 {
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: 200;
+    width: 100%;
+    padding:0.8em 1em;
+}
+
+#content p {
+    text-align: justify;
+    padding-left: 2em;
+    padding-right: 2em;   
+    font-size: 1.2em;
+}
+
+#content section#slideshow img {
+    padding-top: 1.4em;
+    display: block;
+	padding-left:7%;
+}
+
+#content div#prev-next {
+    display: block;
+    padding-left:25em;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+#content div#prev-next span#prev {
+    color: rgb(249, 75, 75);
+    transition: all 0.5s ease
+}
+
+#content div#prev-next span#prev:hover {
+    color: rgb(29, 29, 29);
+    cursor: pointer;
+    transition: all 0.5s ease
+}
+
+#content div#prev-next span#next {
+    color: rgb(249, 75, 75);
+    transition: all 0.5s ease
+}
+
+#content div#prev-next span#next:hover {
+    color: rgb(29, 29, 29);
+    cursor: pointer;
+    transition: all 0.5s ease
+}
+
+#content div ul#functions-list {
+    padding-left: 4em;
+    padding-top: 2em;
+    font-size: 1.2em;
+}
+
+/* tutorials instrument options available*/
+#instruments-options > h3 {
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: 200;
+    width: 100%;
+    padding:0.8em 1em;
+    color: rgb(249, 75, 75);
+}
+
+#instruments-options {
+    padding: 0em 3.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#instruments-options article {
+    width:30%;
+    min-width:200px;
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 2em;
+}
+
+#instruments-options article img {
+    width:40%;
+    min-width:40%;
+    border-radius: 20%;
+    filter: grayscale(100%);
+    transition: all 0.5s ease
+}
+
+#instruments-options article img:hover {
+    filter: grayscale(0%);
+    border-radius: 100%;
+    transition: all 0.5s ease;
+}
+
+#instruments-options article nav.tut-link {
+    padding-top: 1.4em;
+}
+
+#instruments-options article nav.tut-link a {
+    color:black;    
+    font-size: 2em;
+	text-decoration: none;
+}
+
+/*tutorial - 3 levels available - beginner, amateur, pro*/
+#levels {
+    position: relative;
+}
+
+#levels > h3 {
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: 200;
+    width: 100%;
+    padding:0.8em 2.7em;
+    color: rgb(249, 75, 75);
+}
+
+#levels ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+}
+
+#levels li {
+    list-style: none;
+    border: 2px solid #d6d6d6;
+    border-radius: 15px;
+}
+
+#levels a {
+    font-size: 2em;
+    color: black;
+    display:block;
+    padding: 4em;
+    text-decoration: none;
+}
+
+#levels ul li a.pro {
+    padding-left: 5em;
+    padding-right: 5em;    
+}
+
+#levels a:hover {
+    background: grey;
+    border-radius: 15px;
+    transition: all 0.7s ease;
+}
+
+/*tutorial video - main content for tutorials*/
+#tutorial-content h2 {
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: 200;
+    width: 100%;
+    padding:0.8em 8em;
+}
+
+#tutorial-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#tutorial-content iframe{
+    padding-top: 2em;
+}
+
+/* footer */
+#page-footer {
+    margin-top: 2em;
+    background-color: #222222;
+    padding: 1.5em 3em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*references link button*/
+#page-footer a {
+    color: white;
+    font-size: 1.3em;
+}
+
+#page-footer a:hover {
+    color: #f94b4b;
+    font-size: 1.3em;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 10;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+  
+#myBtn:hover {
+    background-color: #555;
+}
+
+#exhiBtn {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 100;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#exhiBtn:hover {
+    background-color: white;
+    color:black;
+    border: solid 1.4px black;
+}
+
+
+.hardware {
+    width:200px;
+}
+
+.cons-pics {
+    padding-top:2em;
+    filter: grayscale(100%);
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s ease
+}
+
+.cons-pics:hover {
+    color: rgb(249, 75, 75);
+    filter: grayscale(0%);
+    transition: all 0.2s ease;
+}
+
+.cons-pics p {
+    padding-left:2em;
+    padding-top:3em;
+    font-size: 1.4em;
+}
+
+#page-break-1 {
+    width: 100%;
+    height: 25vh;
+    background-image: url("images/pagebreak1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+
+#page-break-2 {
+    width: 100%;
+    height: 25vh;
+    background-image: url("images/pagebreak2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+
+#page-break-3 {
+    width: 100%;
+    height: 25vh;
+    background-image: url("images/pagebreak3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+
+#page-break-4 {
+    width: 100%;
+    height: 25vh;
+    background-image: url("images/pagebreak5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+
+#page-break-5 {
+    width: 100%;
+    height: 25vh;
+    background-image: url("images/pagebreak4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+/* If the screen width is under 585 pixels, then it will do the following funcitons*/
+
+@media only screen and (max-width:1124px) {
+    /* For tablets: */
+    #main-menu {
+    }
+
+    #main-menu ul{
+     
+        justify-content: center;
+    }
+
+    #main-meuni li{
+        text-align: center;
+    }
+
+    #main-menu a{
+        width: 200px;
+        height: 70px;         
+        font-size: 1.2em;
+    }
+    
+  }
+
+@media only screen and (max-width: 585px) { 
+
+    body {
+        font-size: 10px;
+        line-height: 1em;
+        display: block; 
+    }
+
+    .page-header {
+        padding:0;
+        background-color: rgb(249, 75, 75); 
+    }
+
+    .page-overview .page-header{
+        background-image: none;
+    }
+
+    .page-overview .page-header #logo a img {
+        height: 200px;
+        padding-top: 50px;
+    }
+
+    #main-menu {
+        background-color: #888;
+        position: relative;
+    }
+
+    #main-menu ul{
+        display: block;
+        justify-content: center;    
+    }
+
+    #main-menu a{
+        display: block;
+        height: 20px;
+        text-align: center; 
+        padding-top: 1.4em;
+        font-size: 1.7em;
+    }
+
+        /* back to the top button*/
+        /* Works fine when scorlling down but is 
+            left behind when scrolling up
+            */
+
+
+    #about-website > h3,
+    #instruments > h3 {
+        font-size: 3em;
+        font-weight: 200;
+        display: block;
+        padding-left: 24%;
+    }
+
+    #about-website {
+        margin: 0em 2%;
+        margin-left: 4%;
+        overflow: visible;
+    }
+
+    #about-website > p {
+        text-align: justify;
+        padding:1em;
+        margin:1em;
+        border: 2px solid #d6d6d6;
+        border-radius: 15px;
+        font-size: 1.6em;
+        line-height: 1.3em;
+    }
+
+        /* about the website popuup */
+    #about-popup {
+        overflow: hidden;
+        position: fixed;
+        left: -40px;
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    #about-popup .about-list {
+        background: #eeeb4a;
+        box-shadow: rgba(0,0,0,0.25) 5px 5px 10px;
+        border-radius: 3vh;
+        font-size: 1.35em;
+        line-height: 1.3em;
+    }
+    
+    #instruments {
+        padding: 0em 3.5em;
+        padding-left:25%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #instruments article {
+        min-width:300px;
+        text-align: center;
+        padding: 0.5em;
+        margin-top: 2em;
+    }
+    
+    #instruments article p {
+        text-align: justify;
+        padding-top: 1.3em;
+        padding-left: 2em; 
+        font-size: 1.6em;
+        max-height: fit-content;
+        line-height: 1.2em;
+    }
+
+    body.js #instruments article.expanded .info {
+        padding-top: 1.3em;
+        font-size: 1.6em;
+        height: 100%;
+        text-align: justify;
+    }
+
+    #about-website .read-more a {
+        font-size: 1.6em;
+    }
+
+    #lesson-options a {
+        padding: 0.5em;
+        line-height: 1em;
+        text-decoration: none;
+    }
+
+    #content {
+        margin: 0em 0.5em;
+        overflow: hidden;
+    }
+    
+    #content h2 {
+        font-size: 3.5em;
+    }
+    
+    #content p {
+        text-align: justify;
+        padding-left: 3em;
+        padding-right: 2em;   
+        font-size: 1.8em;
+        line-height: 1em;
+    }
+
+    #content div ul#functions-list {
+        padding-left: 4em;
+        padding-top: 2em;
+        font-size: 1.8em;
+        line-height: 1em;
+    }
+}
+
+/* If the screen width is under 862 pixels, then it will do the following funcitons*/
+@media only screen and (max-width: 862px) { 
+
+    /* Lessons options*/
+    #lesson-options {
+        position: relative;
+    }
+
+    #lesson-options ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    #lesson-options li {
+        list-style: none;
+        border: 2px solid #d6d6d6;
+        border-radius: 15px;
+    }
+
+    #lesson-options a {
+        font-size: 2em;
+        color: black;
+        display:block;
+        padding: 3em;
+        text-decoration: none;
+    }
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        z-index: 10;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+      
+    #myBtn:hover {
+        background-color: #555;
+    }
+
+
+
+}
+
+

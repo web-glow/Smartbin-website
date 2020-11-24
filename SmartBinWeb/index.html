@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SmartBin</title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <!--HOME PAGE of the website-->
+    <body class="page-overview">
+        <button id="exhiBtn"><a style="	text-decoration: none; color:white; background-color: black;" href="https://ixd-2020.uqcloud.net/">Back to IXD-2020 Exhibit</a></button>
+        <header class="page-header">
+            
+            <figure id="logo">
+                <a href="index.html">
+                    <img style="margin-top:3.4em;" src="images/head.png" alt="SmartBin Logo">
+                </a>    
+            </figure>
+                
+        </header>
+
+        <nav id="main-menu">
+            <ul>
+                <li>
+                    <a id="concept-head" href="#concept">Concept</a>
+                </li>
+                <li>
+                    <a id="product-head" href="#product">Product</a>
+                </li>
+                <li>
+                    <a id="construction-head" href="#construction">Construction</a>
+                </li>
+                <li>
+                    <a id="design-head" href="#design">Design Process</a>
+                </li>
+                <li>
+                    <a id="outcomes-head" href="#outcomes">Outcomes </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="sect" id="concept">
+            <h3>Ideal Concept</h3>
+
+            <p>Our team's topic was digital sensation and creative learning
+                and we chose our target audience as school children and educate them about topics related to climate change and help them become sustainable citizens when they grow up. We all worked on different solutions to this problem space.      
+                <br>
+                <br>
+                The SmartBin that I developed is a simple but a very useful concept for teaching its audience about good habits of throwing the garbage in the bins. We all know and have seen the effects of not throwing the garbage in the bins. Soil contamination, extreme climate changes, water contamination, impact on animals and marine life are all just different parts of this big problem which is slowly killing the planet.
+            </p>
+            <br>
+            <div style="display: flex; justify-content: center;">
+                <img width="400" src="images/firstdesgin.PNG" />
+            </div>
+            <p> Above image shows the first design of the concept which didn't include any bins.<i> Made by Kuan Liu, Team Zookeepers</i>
+                <br>
+                <br>
+                This SmartBin is an interactive bin which reacts when a user throws garbage in it. The globe goes greener when any recyclable or non-recyclable garbage is put in the respective bins and redder when there is less garbage to dispose. There will be more sound of birds chirping when there is a lot of garbage to dispose and no sound when no garbage in the bins. And when the SmartBin is empty for too long, the globe will start vibrating, mocking an earthquake which is obviously bad. 
+                It will keep on collecting garbage throughout the day and change its effects accordingly. 
+                This will encourage children to keep the garbage in the smartbin rather than keeping it out for too long or throwing it in a wrong way.
+                The complete project would also use 2 cameras to detect if the garbage is being thrown in the correct bin which is either recylable or non-recyclable.
+                <br>
+                <br>
+                It is very important to throw the garbage in the bins so that the city counsil can make sure that the garbage is disposed or recycled in the best possible way.
+             </p>
+        </section>
+
+        <section id="page-break-1"></section>
+
+        <section class="sect" id="product">
+            <h3>Actual Product </h3>
+            <p>In this final Product, the bin has 3 main features which inludes 2 visual features and 1 audible feature. 
+                The 2 visual features include the change in the colour of the globe as the garbage is thrown and the earthquake effect which is when the earth starts vibrating/shaking.
+                The audible features include the increase in the volume of 'chirping of birds' as the user throws garbage.
+              <br>
+              <br>
+
+                Below is a small demonstration of how the audio works. As you can see when we put garbage into the bins, the sound gets louder and the colour changes from red to green.
+                <div style="display: flex; justify-content: center;">
+                    <video width="400" autoplay loop muted>
+                        <source src="images/vid.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    <video style="margin-left: 2em;" width="400" controls>
+                        <source src="images/vidsound.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                </div>
+
+                <br>
+                <p>All the features are live features and no simulations is used in the Product. The only feature that is not included from the initial concept is the feature of the SmartBin's ability to be able to detect whether if a item is recyclable or not. As this is a very big function which requires complex code, I didn't have enough time to complete this function. But in the future versions of the product, this is a potential feature.
+                    <br>
+                    <br>
+              
+                Below is a small demonstration of earthquake feature works. The motor has a small nut attached to it so that it vibrates. Onces inside the globe, it shakes the whole globe.
+              
+                </p>
+                <div style="display: flex; justify-content: center;">
+                    <video height="400" autoplay loop muted>
+                        <source src="images/mech.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    <video style="margin-left: 2em;" width="600" autoplay loop muted>
+                        <source src="images/eq.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                </div>
+                    <p>The intended usage of the product is to make sure that children of age 5 - 16 build a healthy habit of keeping the environment clean by throwing the rubbish into the bins. 
+                    The Bin will even encourage children to collect garbage to throw it into the globe on the SmartBin so that it stays green. 
+                    As this will be implemented in the classrooms of schools, this will be a collective effort from all the students in each classroom to make sure that their 'globe' stays green.
+                    For the purpose of the demo, I have set the the globe to change colour quickly so that viewers will be able to observe all the changes in real time during the exhibition demo.
+                </p>
+            <br>
+        </section>
+                <section id="page-break-2"></section>
+        <section class="sect" id="construction">
+            <h3>Construction</h3>
+            <p>For <strong>Software</strong>, I used Arduino and Processing software to code the features. To make sure the intended functionalities worked properly, I used Arduino Uno - a microcontroller board based on the ATmega328P. 
+            
+            </p>
+            <p>
+            Below shows the <strong>Hardware</strong> I have used to make the physical features. The sound is generated via the computer via the software called Processing and no external electronics were used.</p>
+            <br>
+            <div class="cons-pics">
+                <img class="hardware" src="images/arduino.PNG" alt="Image of arduino">
+                <p>Arduino Uno board - a microcontroller.</p>
+            </div>
+            <div class="cons-pics">
+                <img class="hardware" src="images/motor.PNG" alt="Image of motor">
+                <p>5V motor to vibrate the globe for the earthquake effect.</p>
+            </div>
+            <div class="cons-pics">
+                <img class="hardware" src="images/led.PNG" alt="Image of led">
+                <p>A neo-pixel LED strip for the light inside the globe.</p>
+            </div>
+            <div class="cons-pics">
+                <img class="hardware" src="images/globe.PNG" alt="Image of globe">
+                <p>A 3D printed globe using green filament to represent the globe.</p>
+            </div>
+            <div class="cons-pics">
+                <img class="hardware" src="images/ultrasonic.PNG" alt="Image of ultrasonic sensor">
+                <p>Two ultrasonic sensors for detecting the items being put inside the bin.</p>
+            </div>
+        </section>
+        <section id="page-break-3"></section>
+        <section class="sect" id="design">
+            <h3>Design Process</h3>
+            <p>After a lot of brainstorming, our team came up with many potential ideas. We all decided to have the same basic concept but design different soloutions for the problem space. <br><br>The initial concept included a competition between different classrooms where whichever classroom threw more recycled items would win. But a critique reflected that this would make some children want to cheat to win, which is not the right way. Hence I decided to remove the competition and make it a collective effort for the children. After the first few prototypes which only included changing colour globe, I took a few user testing and the users suggested that I should have more effects on the globe. Hence I decided to go with the earthquake and the sound of the birds features to make it more engaging and responsive.
+                Initially I also didn't have an actual globe, and the users wanted to see and actual globe, so I decided to make a 3D printed globe. 
+            </p>
+            <p>The following is a video of the <strong><u>early concept</u></strong> which also includes a demo</p>
+            <div style="display: flex; justify-content: center; margin-bottom:1em;"><iframe width="560" height="315" src="https://www.youtube.com/embed/21SYNr6Rho8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="page-break-4"></section>
+        <section class="sect" id="outcomes">
+            <h3>Outcomes and Reflection</h3>
+            <p>So finally when I tested the Final product on the user who had previously tested it, they thought that it was an improved model and could clearly see how it becomes engaging for them to make sure that they throw all the garbage in the bin.
+                <br><br>
+                For one of the user tests, I just gave the user 2 items to throw in the bin, which after throwning i took away so that the globe turned red and started vibrating with no sound of birds which made the user ask if they could throw more stuff in to make the globe better. I think that this was a successfull product and achieved its intentions.
+            </p>
+           
+        </section>
+        <section class="sect" id="outcomes">
+            <p><strong>Link to My Journal: </strong><a href="https://deco3850.uqcloud.net/students/jsehmbey">https://deco3850.uqcloud.net/students/jsehmbey</a></p>
+            <p><strong>Team Pitch Video: </strong><a href="https://youtu.be/KO-14xvVpO8">https://youtu.be/KO-14xvVpO8</a></p>
+            <p><strong>Team Proposal: </strong><a href="https://docs.google.com/document/d/1IccQVbQ0GAl9JtIdQIjzmTLgZtflQsKuvJF9YnFQvU4/edit?usp=sharing">https://docs.google.com/document/d/1IccQVbQ0GAl9JtIdQIjzmTLgZtflQsKuvJF9YnFQvU4/edit?usp=sharing</a></p>
+            
+            <p><strong>Team Zookeepers Members:</strong>
+                <br>
+                Kuan Liu
+                <br>
+                Kasey Zheng
+                <br>
+                Eddy Carroll
+            
+            </p>
+           
+        </section>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to Top" ></button>
+        <footer id="page-footer">
+            <a>Jaskaran Singh Sehmbey, Team Zookeepers</a>
+        </footer>
+
+    </body>
+
+</html>
